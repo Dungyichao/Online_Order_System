@@ -33,5 +33,5 @@ Second, the demonstration of boss view. There is a console for boss to review, e
 Three major programming thing we need to deal with: React, Reac-bootstrap, Firebase Database. We are not going to dive into the code, but we will focus more on the concept (becuase you may find many useful tutorials guide you through the code). Although this is a small project, it includes more than 60 files of codes, we need to archive them into folders. The following chart is the relationship of each folder and their corresponding function and web page. 
 
 <p align="center">
-<img src="/Doc/img/code_structure.PNG" height="100%" width="100%">  
+<img src="/Doc/img/code_structure.png" height="100%" width="100%">  
 </p>
