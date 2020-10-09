@@ -3,6 +3,7 @@ This project is to help a local restaurant in Columbia SC to provide online orde
 
 # 1. What is the Goal <br />
 Let's list out the requirement for an online order service and the programming structure in the following. <br />
+
 **1.1 Requirement**
 * Public users can review the information and menu of the restaurant. They can sign up or sign in to their account.
 * Registered customer can see the menu and place order.
