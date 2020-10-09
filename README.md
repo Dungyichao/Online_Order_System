@@ -8,7 +8,7 @@ Let's list out the requirement for an online order service and the programming s
 * Registered customer can see the menu and place order.
 * Boss can review customers' orders and change the status of each order. Boss can disable online order service.
 <p align="center">
-<img src="/Doc/img/requirement.PNG" height="70%" width="70%">  
+<img src="/Doc/img/requirement.PNG" height="30%" width="30%">  
 </p>
     
 **1.2 App Category**    
