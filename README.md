@@ -17,3 +17,9 @@ According to the above requirement, we can categorize our programming design int
 <p align="center">
 <img src="/Doc/img/category.PNG" height="90%" width="90%">  
 </p>
+
+**1.2 Final Result** 
+Let's have a look at the final result. First one is the GIF of the regular customer demonstration.
+<p align="center">
+<img src="/Demo/Customer.gif" height="80%" width="80%"> 
+</p>  
