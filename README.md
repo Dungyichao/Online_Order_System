@@ -104,3 +104,21 @@ The following link: https://dev.to/mychal/protected-routes-with-react-function-c
 Official site: https://react-bootstrap.github.io/getting-started/introduction
 Problem you might encounter: <br />
 * A. ***The react-bootstrap not working or showing as expected***: Add ```import "bootstrap/dist/css/bootstrap.css";``` in your index.js
+
+## 3.4 React <br />
+Problem you might encounter: <br />
+* A. ***Each child in an array should have a unique "key" prop.***: When render component in map, you should do something like the following
+```
+.......
+render(){
+    return(
+        someObjectArray.map((item. idx) => {
+            return(
+            <div key={idx}>
+                <Component data={item.datas} />
+            </div>
+            )
+        })
+    )
+}
+```
