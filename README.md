@@ -158,6 +158,7 @@ remove_item(e) {
 
 ```
 ### 3.5.2 Value Operation (Add/Substract)
+https://stackoverflow.com/questions/11832914/round-to-at-most-2-decimal-places-only-if-necessary
 When I try to add price or substract price from current price, I would get some wierd result, the following can help to prevent it. (```Src/Components/utility.js```)
 ```javascript
 function add_two_price(priceone, pricetwo) {
