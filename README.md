@@ -129,6 +129,9 @@ render(){
     )
 }
 ```
+* B. ***React render the list not expected***: This is my own question asked on stack overflow. The problem is, the data in the array are correct (cart data), but after customer remove one item from the cart (object in array), the other data are not render correctly. Someone suggest me to use functional component if I don't need to keep tracking on its state. Finally, I found out that the root cause is during the time customer add the item to cart, I should clear the state of the ```Src/Customer/Order/Menu/DishItem.js``` after sending the data (object) to ```Src/Customer/Order/order.js``` (which hold the array of objects) and then pass it to ```Src/Customer/Order/Cart/CartItem.js``` for rendering.
+https://stackoverflow.com/questions/63913020/react-render-list-incorrect-list-is-correct-but-render-overwrite-and-duplicate
+
 
 ## 3.5 Javascript <br />
 ### 3.5.1 Shallow Copy or Deep Clone
