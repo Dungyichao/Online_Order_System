@@ -14,4 +14,6 @@ Let's list out the requirement for an online order service and the programming s
     
 **1.2 App Category**    
 According to the above requirement, we can categorize our programming design into 6 catergories
-
+<p align="center">
+<img src="/Doc/img/category.PNG" height="30%" width="30%">  
+</p>
