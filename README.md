@@ -19,7 +19,7 @@ According to the above requirement, we can categorize our programming design int
 </p>
 
 **1.3 Final Result** <br />
-Let's have a look at the final result. First one is the GIF of the regular customer demonstration.
+Let's have a look at the final result. First one is the GIF of the regular customer demonstration. After the customer place the oder, he or she can view the order status in real time.
 <p align="center">
 <img src="/Demo/Customer.gif" height="25%" width="25%"> 
 </p>  
