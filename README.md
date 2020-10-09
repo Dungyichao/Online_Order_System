@@ -108,8 +108,11 @@ React-bootstrap provides so much great components such as menu bar, button, form
 Official site: https://react-bootstrap.github.io/getting-started/introduction
 Problem you might encounter: <br />
 * A. ***The react-bootstrap not working or showing as expected***: Add ```import "bootstrap/dist/css/bootstrap.css";``` in your index.js
+* B. ***Increase Toast width***: Add style={{maxWidth: '100%'}}
 
 ## 3.4 React <br />
+### 3.4.1 Deep clone array 
+
 Problem you might encounter: <br />
 * A. ***Each child in an array should have a unique "key" prop.***: When render component in map, you should do something like the following
 ```
@@ -126,3 +129,6 @@ render(){
     )
 }
 ```
+
+## 3.5 Javascript <br />
+
