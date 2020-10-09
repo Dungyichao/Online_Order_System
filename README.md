@@ -1,5 +1,5 @@
 # Online Order System with React and Firebase
-This project is to help a local restaurant in Columbia SC to provide online order service (because of COVID-19). We host the project on Google Firebase for free. I will summarize the design concept, code structure in this tutorial.
+This project is to help a local restaurant in Columbia SC to provide online order service (because of COVID-19). We host the project on Google Firebase for free. I will summarize the design concept, code structure in this tutorial. The coding environment is in Ubuntu OS and Visual Studio Code IDE.
 
 # 1. What is the Goal <br />
 Let's list out the requirement for an online order service and the programming structure in the following. <br />
@@ -30,8 +30,22 @@ Second, the demonstration of boss view. There is a console for boss to review, e
 </p>
 
 # 2. Programming <br />
-Three major programming thing we need to deal with: React, Reac-bootstrap, Firebase Database. We are not going to dive into the code, but we will focus more on the concept (becuase you may find many useful tutorials guide you through the code). Although this is a small project, it includes more than 60 files of codes, we need to archive them into folders. The following chart is the relationship of each folder and their corresponding function and web page. 
+Three major programming thing we need to deal with: React, Reac-bootstrap, Firebase Database. We are not going to dive into the code, but we will focus more on the concept (becuase you may find many useful tutorials guide you through the code and I will provide the link). Although this is a small project, it includes more than 60 files of codes, we need to archive them into folders. The following chart is the relationship of each folder and their corresponding function and web page. (Please click the image to enlarge for more clear view)
 
 <p align="center">
 <img src="/Doc/img/code_structure.png" height="100%" width="100%">  
 </p>
+
+### 2.1 Install and Create React App Porject
+```linux
+$ sudo apt install curl
+$ curl -sL https://deb.nodesource.com/setup_12.x |sudo -E bash -
+$ sudo apt install nodejs
+$ sudo apt-get install -y nodejs
+$ sudo apt install npm
+$ sudo npm install npm@latest –g
+// Create a project folder and then cd to that folder
+$ npm init
+$ npm start
+// A React App Webpage will display
+```
