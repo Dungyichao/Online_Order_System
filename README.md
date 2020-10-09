@@ -28,5 +28,5 @@ Let's have a look at the final result. First one is the GIF of the regular custo
 Second, the demonstration of boss view. There is a console for boss to review, edit, and search all the orders and their status. 
 
 <p align="center">
-<img src="/Demo/Boss.gif" height="70%" width="70%"> 
+<img src="/Demo/Boss.gif" height="90%" width="90%"> 
 </p>
