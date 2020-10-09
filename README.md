@@ -46,6 +46,7 @@ $ npm start
 // A React App Webpage will display
 ```
 ## 2.2 Host Project on Firebase
+You first create project in Firebase console: https://console.firebase.google.com/
 
 ```linux
 $ npminstall -g firebase-tools
@@ -55,6 +56,12 @@ $ firebase login
 $ npm start
 $ npm run-script build
 $ firebase init
+// Select: Database, Hosting, (Functions can be add later)
+// Select: Use an existing project
+// What do you want to use as your public directory? build
+// Configure as a single-page app (rewrite all urls to /index.html)? Yes
+// File build/index.html already exists. Overwrite? N
+$ firebase deploy
 ```
 
 # 3. Programming <br />
