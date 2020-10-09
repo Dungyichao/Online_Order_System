@@ -157,3 +157,20 @@ remove_item(e) {
     }
 
 ```
+### 3.5.2 Value Operation (Add/Substract)
+When I try to add price or substract price from current price, I would get some wierd result, the following can help to prevent it. (```Src/Components/utility.js```)
+```javascript
+function add_two_price(priceone, pricetwo) {
+    let order_price = priceone;
+    order_price = (Math.round(order_price * 100) + Math.round(pricetwo * 100)) / 100;
+    return order_price
+}
+
+function subtract_two_price(firstprice, secondprice) {
+    let order_price = firstprice;
+    order_price = (Math.round(order_price * 100.0) - Math.round(secondprice * 100.0)) / 100;
+    return order_price
+}
+
+```
+
