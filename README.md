@@ -95,12 +95,16 @@ https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denie
 ### 3.1.1 Firebase Authentication <br />
 A good tutorial can be start from here: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial and https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signinwithemailandpassword. 
 
-## 3.2 React-router-dom <br />
+Notice that, cause we've initialize the firebase object, so when we call some function provided by firebase, the syntax might be little different from the official document.
 
+## 3.2 React-router-dom <br />
+React-router-dom can provide client user can be redirected without page reload. We use this in ```App.js```.
 ### 3.2.1 Protected Routes 
-The following link: https://dev.to/mychal/protected-routes-with-react-function-components-dh
+Actually, nothing is really protected on the client side, cause all your code are transmitting to client web browser for rendering. Nothing is protected. Protected Routh method can only prevent client from using some functions if they doesn't meet some criteria.
+The following link: https://dev.to/mychal/protected-routes-with-react-function-components-dh shows you how to make protected route. You may find the implimentation in ```Src/App.js``` and ```Src/Components/ProtectedRoutes.js```.
 
 ## 3.3 React-bootstrap <br />
+React-bootstrap provides so much great components such as menu bar, button, form, cards, tabs. They are beautiful and responsive.
 Official site: https://react-bootstrap.github.io/getting-started/introduction
 Problem you might encounter: <br />
 * A. ***The react-bootstrap not working or showing as expected***: Add ```import "bootstrap/dist/css/bootstrap.css";``` in your index.js
