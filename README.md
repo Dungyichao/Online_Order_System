@@ -76,7 +76,23 @@ We are not going to dive into the code, but we will focus more on the concept (b
 The firebase object is in code: ```Src/Firebase/firebase.js```. However, this object will be initialized and created in ```App.js``` and you should only create it once, and then pass this initialized object into other components for further usage. If you don't go through this manner, you are prone to get error like: ***you cannot initializeApp() more than once.***
 
 Problem you might encounter: <br />
-* A. Blank webpage after deploy hosting on Firebase: You need to configure the ```firebase.json``` file (see ```Package_Rule/firebase.json```)
+* A. ***Blank webpage after deploy hosting on Firebase***: You need to configure the ```firebase.json``` file (see ```Package_Rule/firebase.json```)
 https://stackoverflow.com/questions/52177222/blank-page-after-successful-firebase-deployment
-* B. Firebase App named DEFAULT already exists: This error occurs when you trying to initialize firebase again and again. It should be initialized at once.
-* C. 
+* B. ***Firebase App named DEFAULT already exists***: This error occurs when you trying to initialize firebase again and again. It should be initialized at once.
+* C. ***FirebaseError: code=permission-denied: Missing or insufficient permissions***: add the following to your Database Rules tab
+```
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write;
+    }
+  }
+}
+```
+https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denied-missing-or-insufficient-permissions
+
+
+### 3.1.1 Firebase Authentication <br />
+A good tutorial can be start from here: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial and https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signinwithemailandpassword. 
+
+
