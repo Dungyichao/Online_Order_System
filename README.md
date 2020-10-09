@@ -115,7 +115,7 @@ Problem you might encounter: <br />
 
 Problem you might encounter: <br />
 * A. ***Each child in an array should have a unique "key" prop.***: When render component in map, you should do something like the following
-```react
+```javascript
 .......
 render(){
     return(
