@@ -21,5 +21,5 @@ According to the above requirement, we can categorize our programming design int
 **1.2 Final Result** 
 Let's have a look at the final result. First one is the GIF of the regular customer demonstration.
 <p align="center">
-<img src="/Demo/Customer.gif" height="80%" width="80%"> 
+<img src="/Demo/Customer.gif" height="30%" width="30%"> 
 </p>  
