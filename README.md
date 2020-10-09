@@ -29,14 +29,10 @@ Second, the demonstration of boss view. There is a console for boss to review, e
 <img src="/Demo/Boss.gif" height="90%" width="90%"> 
 </p>
 
-# 2. Programming <br />
-Three major programming thing we need to deal with: React, Reac-bootstrap, Firebase Database. We are not going to dive into the code, but we will focus more on the concept (becuase you may find many useful tutorials guide you through the code and I will provide the link). Although this is a small project, it includes more than 60 files of codes, we need to archive them into folders. The following chart is the relationship of each folder and their corresponding function and web page. (Please click the image to enlarge for more clear view)
+# 2. Configuration <br />
+Three major programming thing we need to deal with: React, Reac-bootstrap, Firebase Database. 
 
-<p align="center">
-<img src="/Doc/img/code_structure.png" height="100%" width="100%">  
-</p>
-
-### 2.1 Install and Create React App Porject
+## 2.1 Install and Create React App Porject
 ```linux
 $ sudo apt install curl
 $ curl -sL https://deb.nodesource.com/setup_12.x |sudo -E bash -
@@ -49,3 +45,21 @@ $ npm init
 $ npm start
 // A React App Webpage will display
 ```
+## 2.2 Host Project on Firebase
+
+```linux
+$ npminstall -g firebase-tools
+$ firebase login
+//Use gmail account
+//Go into React project folder
+$ npm start
+$ npm run-script build
+$ firebase init
+```
+
+# 3. Programming <br />
+We are not going to dive into the code, but we will focus more on the concept (becuase you may find many useful tutorials guide you through the code and I will provide the link). Although this is a small project, it includes more than 60 files of codes, we need to archive them into folders. The following chart is the relationship of each folder and their corresponding function and web page. (Please click the image to enlarge for more clear view)
+
+<p align="center">
+<img src="/Doc/img/code_structure.png" height="100%" width="100%">  
+</p>
