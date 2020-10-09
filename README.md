@@ -62,6 +62,7 @@ $ firebase init
 // Configure as a single-page app (rewrite all urls to /index.html)? Yes
 // File build/index.html already exists. Overwrite? N
 $ firebase deploy
+// You now can visit the website from browser which URL that Firebase gave you.
 ```
 
 # 3. Programming <br />
