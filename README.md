@@ -80,7 +80,7 @@ Problem you might encounter: <br />
 https://stackoverflow.com/questions/52177222/blank-page-after-successful-firebase-deployment
 * B. ***Firebase App named DEFAULT already exists***: This error occurs when you trying to initialize firebase again and again. It should be initialized at once.
 * C. ***FirebaseError: code=permission-denied: Missing or insufficient permissions***: add the following to your Database Rules tab
-```
+```json
 service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {
@@ -115,7 +115,7 @@ Problem you might encounter: <br />
 
 Problem you might encounter: <br />
 * A. ***Each child in an array should have a unique "key" prop.***: When render component in map, you should do something like the following
-```
+```react
 .......
 render(){
     return(
