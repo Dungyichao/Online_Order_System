@@ -73,4 +73,4 @@ We are not going to dive into the code, but we will focus more on the concept (b
 </p>
 
 ## 3.1 Firebase <br />
-The initialization of firebase object is done in folder: ```Src/Firebase/firebase.js ```. This object will be create in ```App.js``` and you should only create it once, and then pass this initialized object into other components for further usage. If you don't go through this manner, you are prone to get error like: ***you cannot initializeApp() more than once.***
+The firebase object is in code: ```Src/Firebase/firebase.js```. However, this object will be initialized and created in ```App.js``` and you should only create it once, and then pass this initialized object into other components for further usage. If you don't go through this manner, you are prone to get error like: ***you cannot initializeApp() more than once.***
