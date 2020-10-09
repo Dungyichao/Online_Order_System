@@ -132,5 +132,25 @@ render(){
 
 ## 3.5 Javascript <br />
 ### 3.5.1 Shallow Copy or Deep Clone
-Please refer to the document for further knowledge: https://github.com/Dungyichao/Online_Order_System/blob/main/Ref/How%20to%20Deep%20Copy%20Objects%20and%20Arrays%20in%20JavaScript.pdf
-We use lodash library's cloneDeep to performence deep copy of array in ```Src/Customer/Order/order.js```. In our example, the array will store objects which each object represents the item the customer added to the cart (the ```Src/Customer/Order/Cart/cart.js``` would render all the information provided by this array of objects). If customer add or remove any item from the cart (which also means the object in the aray), we need to first deep clone the original array, add or remove object from this new cloned array, then use```setState``` to replace the original array with the new modified array. If you don't use deep clone, the cart would not render as you expected. 
+Please refer to the document for further knowledge: https://github.com/Dungyichao/Online_Order_System/blob/main/Ref/How%20to%20Deep%20Copy%20Objects%20and%20Arrays%20in%20JavaScript.pdf . <br />
+We use lodash library's cloneDeep to performence deep copy of array in ```Src/Customer/Order/order.js```. In our example, the array will store objects which each object represents the item the customer added to the cart (the ```Src/Customer/Order/Cart/cart.js``` would render all the information provided by this array of objects). If customer add or remove any item from the cart (which also means the object in the aray), we need to first deep clone the original array, add or remove object from this new cloned array, then use```setState``` to replace the original array with the new modified array. If you don't use deep clone, the cart would not render as you expected. For example
+```javascript
+import _ from "lodash"
+....
+this.state = {
+    Cart_data: [],
+}
+....
+remove_item(e) {
+        let { Cart_data } = this.state;
+
+        const remove_item = Cart_data.filter((item) => item.uid === e);
+
+        let deepcopy_list = _.cloneDeep(Cart_data);
+        const newlist = deepcopy_list.filter((item) => item.uid !== e);
+        this.setState({ Cart_data: newlist }, () => {
+            //some callback
+        });
+    }
+
+```
