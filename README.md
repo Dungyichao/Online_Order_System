@@ -7,6 +7,9 @@ Let's list out the requirement for an online order service and the programming s
 * Public users can review the information and menu of the restaurant. They can sign up or sign in to their account.
 * Registered customer can see the menu and place order.
 * Boss can review customers' orders and change the status of each order. Boss can disable online order service.
+<p align="center">
+<img src="/Doc/img/requirement.PNG" height="70%" width="70%">  
+</p>
     
 **1.2 App Category**    
 According to the above requirement, we can categorize our programming design into 6 catergories
