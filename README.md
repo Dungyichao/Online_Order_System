@@ -95,4 +95,12 @@ https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denie
 ### 3.1.1 Firebase Authentication <br />
 A good tutorial can be start from here: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial and https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signinwithemailandpassword. 
 
+## 3.2 React-router-dom <br />
 
+### 3.2.1 Protected Routes 
+The following link: https://dev.to/mychal/protected-routes-with-react-function-components-dh
+
+## 3.3 React-bootstrap <br />
+Official site: https://react-bootstrap.github.io/getting-started/introduction
+Problem you might encounter: <br />
+* A. ***The react-bootstrap not working or showing as expected***: Add ```import "bootstrap/dist/css/bootstrap.css";``` in your index.js
