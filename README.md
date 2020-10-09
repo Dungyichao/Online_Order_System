@@ -71,3 +71,6 @@ We are not going to dive into the code, but we will focus more on the concept (b
 <p align="center">
 <img src="/Doc/img/code_structure.png" height="100%" width="100%">  
 </p>
+
+## 3.1 Firebase <br />
+The initialization of firebase object is done in folder: ```Src/Firebase/firebase.js ```. This object will be create in ```App.js``` and you should only create it once, and then pass to other components for further usage.
