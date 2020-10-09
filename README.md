@@ -12,14 +12,21 @@ Let's list out the requirement for an online order service and the programming s
 <img src="/Doc/img/requirement.PNG" height="30%" width="30%">  
 </p>
     
-**1.2 App Category**    
+**1.2 App Category** <br />   
 According to the above requirement, we can categorize our programming design into 6 catergories
 <p align="center">
 <img src="/Doc/img/category.PNG" height="90%" width="90%">  
 </p>
 
-**1.2 Final Result** 
+**1.2 Final Result** <br />
 Let's have a look at the final result. First one is the GIF of the regular customer demonstration.
+
 <p align="center">
-<img src="/Demo/Customer.gif" height="30%" width="30%"> 
+<img src="/Demo/Customer.gif" height="25%" width="25%"> 
 </p>  
+
+Second, the demonstration of boss view. There is a console for boss to review, edit, and search all the orders and their status. 
+
+<p align="center">
+<img src="/Demo/Boss.gif" height="25%" width="25%"> 
+</p>
