@@ -83,7 +83,7 @@ https://brandonlehr.com/reactjs/2018/11/08/unsubscribing-from-firestore-realtime
 When you try to fetch data from Firebase with order or where clause, you might need to give index to the collection (You will see error from console.)
 https://firebase.google.com/docs/firestore/query-data/indexing?authuser=2
 
-### 3.1.2 Problem you might encounter <br />
+### 3.1.3 Problem you might encounter <br />
 
 * A. ***Blank webpage after deploy hosting on Firebase***: You need to configure the ```firebase.json``` file (see ```Package_Rule/firebase.json```)
 https://stackoverflow.com/questions/52177222/blank-page-after-successful-firebase-deployment
@@ -114,7 +114,7 @@ https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denie
 
 
 
-### 3.1.3 Firebase Authentication <br />
+### 3.1.4 Firebase Authentication <br />
 A good tutorial can be start from here: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial and https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signinwithemailandpassword. 
 
 #### reCAPTCHA and phone authentication
@@ -269,3 +269,26 @@ for (var i=0;tt<24*60; i++) {
 console.log(times);
 ```
 
+### 3.5.4 Local Sotrage
+Whenever user refresh the page which he or she has already login, the login information will be cleared out and user is logged out automatically. In order to address this value, we need to use logalStorage. 
+```javascript
+// setter
+localStorage.setItem('myData', data);
+ 
+// getter
+localStorage.getItem('myData');
+ 
+// remove
+localStorage.removeItem('myData');
+ 
+// remove all
+localStorage.clear();
+```
+
+https://www.robinwieruch.de/local-storage-react
+
+If you want to store map in localStorage, you need to use the following:
+```
+localStorage.setItem('user_info', JSON.stringify(user_profiles));
+JSON.parse(localStorage.getItem('user_info'))
+```
