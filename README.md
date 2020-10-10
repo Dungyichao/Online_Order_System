@@ -163,9 +163,9 @@ Problem you might encounter: <br />
 <img src={require(`./img/${img.code}.jpg`)}/>
 ```
 Remember to also check if the dynamic image path exist a picture before render it.
-https://stackoverflow.com/questions/54033765/how-to-give-image-src-dynamically-in-react-js
-https://stackoverflow.com/questions/54149326/is-there-a-way-to-check-if-an-image-exists-before-setting-the-image-source-in-re
-Related question: https://stackoverflow.com/questions/47357311/how-do-i-create-a-dynamic-variable-name-in-react
+https://stackoverflow.com/questions/54033765/how-to-give-image-src-dynamically-in-react-js <br />
+https://stackoverflow.com/questions/54149326/is-there-a-way-to-check-if-an-image-exists-before-setting-the-image-source-in-re <br />
+Related question: https://stackoverflow.com/questions/47357311/how-do-i-create-a-dynamic-variable-name-in-react 
 use the ```[]``` 
 ```javascript
 this.setState({["level" + (selectedItem.Level+1)]: FilteredListFromClick})
@@ -191,7 +191,7 @@ render(){
 https://stackoverflow.com/questions/63913020/react-render-list-incorrect-list-is-correct-but-render-overwrite-and-duplicate
 
 * C. ***Add Own icon Logo***: Open the react app in your favorite code editor. Navigate to the public folder and delete the favicon.ico file. Now, add a new favicon inside the public folder.
-https://stackoverflow.com/questions/42303813/how-to-add-my-own-svg-image-just-like-logo-is-shown-by-default-in-create-react-a
+https://stackoverflow.com/questions/42303813/how-to-add-my-own-svg-image-just-like-logo-is-shown-by-default-in-create-react-a <br />
 https://reactgo.com/react-change-favicon/
 
 * D. ***Remove <React.StrictMode>***: Remove <React.StrictMode> will solve the problem in development mode.
