@@ -75,7 +75,12 @@ We are not going to dive into the code, but we will focus more on the concept (b
 ## 3.1 Firebase <br />
 The firebase object is in code: ```Src/Firebase/firebase.js```. However, this object will be initialized and created in ```App.js``` and you should only create it once, and then pass this initialized object into other components for further usage. If you don't go through this manner, you are prone to get error like: ***you cannot initializeApp() more than once.***
 
-Problem you might encounter: <br />
+### 3.1.1 Unsubscribing from Firestore Realtime updates in React
+We want the boss to be able to receive the new issued orders from customer as soon as customer submits it. We need to use ***onSnapshot()*** function and return a ***unscribe function*** when we start listening the table. Just right before we close the page which is listening to table, we need to call the ***unsubsccribe function*** (which we return from start listening) to terminate the listening. You may find the implementation in ```Src/Admin/Order/Order.js  refresh_firebase_data() and componentWillUnmount()``` and ```Src/Components/order.js   GetOrder_Listen_Unsubscribe```
+https://brandonlehr.com/reactjs/2018/11/08/unsubscribing-from-firestore-realtime-updates-in-react
+
+### 3.1.2 Problem you might encounter <br />
+
 * A. ***Blank webpage after deploy hosting on Firebase***: You need to configure the ```firebase.json``` file (see ```Package_Rule/firebase.json```)
 https://stackoverflow.com/questions/52177222/blank-page-after-successful-firebase-deployment
 * B. ***Firebase App named DEFAULT already exists***: This error occurs when you trying to initialize firebase again and again. It should be initialized at once.
@@ -91,6 +96,8 @@ service cloud.firestore {
 ```
 https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denied-missing-or-insufficient-permissions
 * D. ***Firebase hosting not changing the picture***: 
+
+
 
 ### 3.1.1 Firebase Authentication <br />
 A good tutorial can be start from here: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial and https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signinwithemailandpassword. 
