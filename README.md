@@ -73,7 +73,7 @@ We are not going to dive into the code, but we will focus more on the concept (b
 </p>
 
 ## 3.1 Firebase <br />
-The firebase object is in code: ```Src/Firebase/firebase.js```. However, this object will be initialized and created in ```App.js``` and you should only create it once, and then pass this initialized object into other components for further usage. If you don't go through this manner, you are prone to get error like: ***you cannot initializeApp() more than once.***
+The firebase object is in code: ```Src/Firebase/firebase.js```. However, this object will be initialized and created in ```App.js``` and you should only create it once, and then pass this initialized object into other components for further usage. If you don't go through this manner, you are prone to get error like: ***you cannot initializeApp() more than once.*** Notice that, cause we've initialize the firebase object, so when we call some function provided by firebase, the syntax might be little different from the official document.
 
 ### 3.1.1 Unsubscribing from Firestore Realtime updates in React
 We want the boss to be able to receive the new issued orders from customer as soon as customer submits it. We need to use ***onSnapshot()*** function and return a ***unscribe function*** when we start listening the table. Just right before we close the page which is listening to table, we need to call the ***unsubsccribe function*** (which we return from start listening) to terminate the listening. You may find the implementation in ```Src/Admin/Order/Order.js  refresh_firebase_data() and componentWillUnmount()``` and ```Src/Components/order.js   GetOrder_Listen_Unsubscribe```
@@ -125,13 +125,23 @@ componentDidMount() {
     });
 }
 ```
-You should also add the following inside the render(){ return(<div></div>)} so that the reCAPTCHA component can be mounted in the page.
+You should also add the following inside the render() so that the reCAPTCHA component can be mounted in the DOM.
 ```javascript
-<div id="recaptcha-container"></div>
+render(){
+    return(
+        <div>
+            .....
+            <div id="recaptcha-container"></div>
+            ...
+            ...
+            ...
+        </div>
+    )
+}
 ```
 When you are going to verify the phone, you need to pass the phone number as well as the ```window.recaptchaVerifier``` to the function ```firebase.auth().signInWithPhoneNumber(....)```
 
-Notice that, cause we've initialize the firebase object, so when we call some function provided by firebase, the syntax might be little different from the official document.
+
 
 ## 3.2 React-router-dom <br />
 React-router-dom can provide client user can be redirected without page reload. We use this in ```App.js```.
