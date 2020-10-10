@@ -99,7 +99,18 @@ service cloud.firestore {
 }
 ```
 https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denied-missing-or-insufficient-permissions
-* D. ***Firebase hosting not changing the picture***: 
+* D. ***Firebase hosting not changing the picture***: Check your ```firebase.json``` and add the following to set the maximum cache time of image. 1800 means 30 minutes.
+```json
+{
+        "source": "**/*.@(jpg|jpeg|gif|png|JPG)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=1800"
+          }
+        ]
+      }
+```
 
 
 
