@@ -251,6 +251,7 @@ function subtract_two_price(firstprice, secondprice) {
 
 ```
 ### 3.5.3 Generate a time list
+We want to provide customer to select pickup time. This is implement in ```Src/Customer/Order/Cart/PickUpTime.js```
 https://stackoverflow.com/questions/36125038/generate-array-of-times-as-strings-for-every-x-minutes-in-javascript
 ``` javascript
 var x = 5; //minutes interval
@@ -270,7 +271,7 @@ console.log(times);
 ```
 
 ### 3.5.4 Local Sotrage
-Whenever user refresh the page which he or she has already login, the login information will be cleared out and user is logged out automatically. In order to address this value, we need to use logalStorage. 
+Whenever user refresh the page which he or she has already login, the login information will be cleared out and user is logged out automatically. In order to address this value, we need to use logalStorage. You may find the implementation in ```Src/App.js```
 ```javascript
 // setter
 localStorage.setItem('myData', data);
@@ -288,7 +289,8 @@ localStorage.clear();
 https://www.robinwieruch.de/local-storage-react
 
 If you want to store map in localStorage, you need to use the following:
-```
+```javascript
 localStorage.setItem('user_info', JSON.stringify(user_profiles));
 JSON.parse(localStorage.getItem('user_info'))
 ```
+### 3.5.5 Await Async Function
