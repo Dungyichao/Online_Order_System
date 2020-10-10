@@ -79,6 +79,10 @@ The firebase object is in code: ```Src/Firebase/firebase.js```. However, this ob
 We want the boss to be able to receive the new issued orders from customer as soon as customer submits it. We need to use ***onSnapshot()*** function and return a ***unscribe function*** when we start listening the table. Just right before we close the page which is listening to table, we need to call the ***unsubsccribe function*** (which we return from start listening) to terminate the listening. You may find the implementation in ```Src/Admin/Order/Order.js  refresh_firebase_data() and componentWillUnmount()``` and ```Src/Components/order.js   GetOrder_Listen_Unsubscribe```
 https://brandonlehr.com/reactjs/2018/11/08/unsubscribing-from-firestore-realtime-updates-in-react
 
+### 3.1.2 Firebase Indexing
+When you try to fetch data from Firebase with order or where clause, you might need to give index to the collection (You will see error from console.)
+https://firebase.google.com/docs/firestore/query-data/indexing?authuser=2
+
 ### 3.1.2 Problem you might encounter <br />
 
 * A. ***Blank webpage after deploy hosting on Firebase***: You need to configure the ```firebase.json``` file (see ```Package_Rule/firebase.json```)
@@ -99,8 +103,33 @@ https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denie
 
 
 
-### 3.1.1 Firebase Authentication <br />
+### 3.1.3 Firebase Authentication <br />
 A good tutorial can be start from here: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial and https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signinwithemailandpassword. 
+
+#### reCAPTCHA and phone authentication
+reCAPTCHA should be initialized when the webpage just mounted
+```javascript
+componentDidMount() {
+    window.recaptchaVerifier = new this.firebase.auth_.RecaptchaVerifier('recaptcha-container', {
+      'size': 'invisible',
+      'callback': function (response) {
+      },
+      'expired-callback': function () {
+        console.log("expired-callback");
+        this.forceUpdate();
+      }
+    });
+
+    window.recaptchaVerifier.render().then(function (widgetId) {
+      window.recaptchaWidgetId = widgetId;
+    });
+}
+```
+You should also add the following inside the render(){ return(<div></div>)} so that the reCAPTCHA component can be mounted in the page.
+```javascript
+<div id="recaptcha-container"></div>
+```
+When you are going to verify the phone, you need to pass the phone number as well as the ```window.recaptchaVerifier``` to the function ```firebase.auth().signInWithPhoneNumber(....)```
 
 Notice that, cause we've initialize the firebase object, so when we call some function provided by firebase, the syntax might be little different from the official document.
 
