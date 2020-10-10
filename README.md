@@ -163,7 +163,7 @@ The following link: https://dev.to/mychal/protected-routes-with-react-function-c
 
 ## 3.3 React-bootstrap <br />
 React-bootstrap provides so much great components such as menu bar, button, form, cards, tabs. They are beautiful and responsive.
-Official site: https://react-bootstrap.github.io/getting-started/introduction
+Official site: https://react-bootstrap.github.io/getting-started/introduction <br />
 Problem you might encounter: <br />
 * A. ***The react-bootstrap not working or showing as expected***: Add ```import "bootstrap/dist/css/bootstrap.css";``` in your index.js
 * B. ***Increase Toast width***: Add style={{maxWidth: '100%'}}
@@ -188,7 +188,7 @@ Problem you might encounter: <br />
 .......
 render(){
     return(
-        someObjectArray.map((item. idx) => {
+        someObjectArray.map((item, idx) => {
             return(
             <div key={idx}>
                 <Component data={item.datas} />
