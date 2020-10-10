@@ -166,7 +166,7 @@ React-bootstrap provides so much great components such as menu bar, button, form
 Official site: https://react-bootstrap.github.io/getting-started/introduction <br />
 Problem you might encounter: <br />
 * A. ***The react-bootstrap not working or showing as expected***: Add ```import "bootstrap/dist/css/bootstrap.css";``` in your index.js
-* B. ***Increase Toast width***: Add style={{maxWidth: '100%'}}
+* B. ***Increase Toast width***: Add ```style={{maxWidth: '100%'}}```
 
 ## 3.4 React <br />
 ### 3.4.1 Dynamic image path
@@ -271,7 +271,7 @@ console.log(times);
 ```
 
 ### 3.5.4 Local Sotrage
-Whenever user refresh the page which he or she has already login, the login information will be cleared out and user is logged out automatically. In order to address this value, we need to use logalStorage. You may find the implementation in ```Src/App.js```
+Whenever user refresh the page which he or she has already login, the login information will be cleared out and user is logged out automatically. In order to address this problem, we need to use logalStorage. You may find the implementation in ```Src/App.js```
 ```javascript
 // setter
 localStorage.setItem('myData', data);
