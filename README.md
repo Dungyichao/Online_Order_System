@@ -90,7 +90,7 @@ service cloud.firestore {
 }
 ```
 https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denied-missing-or-insufficient-permissions
-
+* D. ***Firebase hosting not changing the picture***: 
 
 ### 3.1.1 Firebase Authentication <br />
 A good tutorial can be start from here: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial and https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signinwithemailandpassword. 
@@ -131,6 +131,13 @@ render(){
 ```
 * B. ***React render the list not expected***: This is my own question asked on stack overflow. The problem is, the data in the array are correct (cart data), but after customer remove one item from the cart (object in array), the other data are not render correctly. Someone suggest me to use functional component if I don't need to keep tracking on its state. Finally, I found out that the root cause is during the time customer add the item to cart, I should clear the state of the ```Src/Customer/Order/Menu/DishItem.js``` after sending the data (object) to ```Src/Customer/Order/order.js``` (which hold the array of objects) and then pass it to ```Src/Customer/Order/Cart/CartItem.js``` for rendering.
 https://stackoverflow.com/questions/63913020/react-render-list-incorrect-list-is-correct-but-render-overwrite-and-duplicate
+
+* C. ***Add Own icon Logo***: Open the react app in your favorite code editor. Navigate to the public folder and delete the favicon.ico file. Now, add a new favicon inside the public folder.
+https://stackoverflow.com/questions/42303813/how-to-add-my-own-svg-image-just-like-logo-is-shown-by-default-in-create-react-a
+https://reactgo.com/react-change-favicon/
+
+* D. ***Remove <React.StrictMode>***: Remove <React.StrictMode> will solve the problem in development mode.
+    https://stackoverflow.com/questions/53183362/what-is-strictmode-in-react
 
 
 ## 3.5 Javascript <br />
@@ -173,5 +180,23 @@ function subtract_two_price(firstprice, secondprice) {
     return order_price
 }
 
+```
+### 3.5.3 Generate a time list
+https://stackoverflow.com/questions/36125038/generate-array-of-times-as-strings-for-every-x-minutes-in-javascript
+``` javascript
+var x = 5; //minutes interval
+var times = []; // time array
+var tt = 0; // start time
+var ap = ['AM', 'PM']; // AM-PM
+
+//loop to increment the time and push results in array
+for (var i=0;tt<24*60; i++) {
+  var hh = Math.floor(tt/60); // getting hours of day in 0-24 format
+  var mm = (tt%60); // getting minutes of the hour in 0-55 format
+  times[i] = ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ap[Math.floor(hh/12)]; // pushing data in array in [00:00 - 12:00 AM/PM format]
+  tt = tt + x;
+}
+
+console.log(times);
 ```
 
