@@ -107,7 +107,8 @@ https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denie
 A good tutorial can be start from here: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial and https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signinwithemailandpassword. 
 
 #### reCAPTCHA and phone authentication
-reCAPTCHA should be initialized when the webpage just mounted
+https://blog.bitsrc.io/how-to-build-a-phone-authentication-component-with-react-and-firebase-52813a95f1ec.
+This is implement in ```Src/Authentication/phone_auth.js``` and ```Src/Authentication/signin.js``` and ```Src/Authentication/signup.js```. reCAPTCHA should be initialized when the webpage just mounted
 ```javascript
 componentDidMount() {
     window.recaptchaVerifier = new this.firebase.auth_.RecaptchaVerifier('recaptcha-container', {
