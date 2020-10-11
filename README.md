@@ -77,18 +77,18 @@ We can categorize all the datas into 4 collections.
     <tbody>
         <tr>
             <td align="center">Admin</td>
-            <td align="Left">...</td>
+            <td align="Left">This collection contains 3 documents: ExtraAdd, FriedRice, and Setting. <br /> * Administrator can modify the open hour, tax rate, and online order service avalibility in Setting document. <br /> * ExtraAdd document contains the add items to each dish <br /> * FriedRice document contain the fried rice items accompany with each dish</td>
             <td align="Left">...</td>
         </tr>
         <tr>
             <td align="center">Menu</td>
-            <td align="Left">...</td>
+            <td align="Left">Contains all the dishs name, price, description, hot value, item number, status (Available/Stop), id (AutoID from Firebase)</td>
             <td align="Left">...</td>
         </tr>
         <tr>
             <td align="center">Orders</td>
-            <td align="Left">...</td>
-            <td align="Left">...</td>
+            <td align="Left">Orders collections contain all the order information from customers. Each day has its own document named with its date such as 20201229. Information contains in each order is displayed in the right column.</td>
+            <td align="Left">* customer_id: customer id when customer signed up an account <br /> * id: This is the id for this order itself, the value contains customer id and the order time (number of milliseconds elapsed since January 1, 1970. From JavaScript: Date.now() function). This will make sure that each order has its unique id. <br /></td>
         </tr>
         <tr>
             <td align="center">users</td>
