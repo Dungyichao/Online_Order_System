@@ -88,7 +88,7 @@ We can categorize all the datas into 4 collections.
         <tr>
             <td align="center">Orders</td>
             <td align="Left">Orders collections contain all the order information from customers. Each day has its own document named with its date such as 20201229. Information contains in each order is displayed in the right column.</td>
-            <td align="Left">* customer_id: customer id when customer signed up an account <br /> * id: This is the id for this order itself, the value contains customer id and the order time (number of milliseconds elapsed since January 1, 1970. From JavaScript: Date.now() function). This will make sure that each order has its unique id. <br /></td>
+            <td align="Left">* customer_id: customer id when customer signed up an account <br /> * id: This is the id for this order itself, the value contains customer id and the order time (number of milliseconds elapsed since January 1, 1970. From JavaScript: Date.now() function). This will make sure that each order has its unique id. <br /> * order_items: this is a map, each object in this map contains the dish name, extra_add item, fried_rice item, quantity, total price from this object only (no tax included) <br /> * pickup_time <br /> * price: sum of all object price (no tax included) <br /> * status: It will have 4 different value, Issued, Confirmed, Complete, Paid, Cancel. This status will be edit by administrator. <br /> * user_info: The user info which provided from user sign up information.</td>
         </tr>
         <tr>
             <td align="center">users</td>
