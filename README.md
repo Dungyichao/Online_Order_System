@@ -64,26 +64,60 @@ $ firebase init
 $ firebase deploy
 // You now can visit the website from browser which URL that Firebase gave you.
 ```
+# 3. Firebase Data Structure <br />
+We can categorize all the datas into 4 collections. 
+<table>
+    <thead>
+        <tr>
+            <th align="center">Collection</th>
+            <th align="center">Detail</th>
+            <th align="center">Field</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">Admin</td>
+            <td align="Left">...</td>
+            <td align="Left">...</td>
+        </tr>
+        <tr>
+            <td align="center">Menu</td>
+            <td align="Left">...</td>
+            <td align="Left">...</td>
+        </tr>
+        <tr>
+            <td align="center">Orders</td>
+            <td align="Left">...</td>
+            <td align="Left">...</td>
+        </tr>
+        <tr>
+            <td align="center">users</td>
+            <td align="Left">...</td>
+            <td align="Left">...</td>
+        </tr>
+    </tbody>
+</table>
+</p>
 
-# 3. Programming <br />
+# 4. Programming <br />
 We are not going to dive into the code, but we will focus more on the concept (becuase you may find many useful tutorials guide you through the code and I will provide the link). Although this is a small project, it includes more than 60 files of codes, we need to archive them into folders. The following chart is the relationship of each folder and their corresponding function and web page. (Please click the image to enlarge for more clear view)
 
 <p align="center">
 <img src="/Doc/img/code_structure.png" height="100%" width="100%">  
 </p>
 
-## 3.1 Firebase <br />
+## 4.1 Firebase <br />
 The firebase object is in code: ```Src/Firebase/firebase.js```. However, this object will be initialized and created in ```App.js``` and you should only create it once, and then pass this initialized object into other components for further usage. If you don't go through this manner, you are prone to get error like: ***you cannot initializeApp() more than once.*** Notice that, cause we've initialize the firebase object, so when we call some function provided by firebase, the syntax might be little different from the official document.
 
-### 3.1.1 Unsubscribing from Firestore Realtime updates in React
+### 4.1.1 Unsubscribing from Firestore Realtime updates in React
 We want the boss to be able to receive the new issued orders from customer as soon as customer submits it. We need to use ***onSnapshot()*** function and return a ***unscribe function*** when we start listening the table. Just right before we close the page which is listening to table, we need to call the ***unsubsccribe function*** (which we return from start listening) to terminate the listening. You may find the implementation in ```Src/Admin/Order/Order.js  refresh_firebase_data() and componentWillUnmount()``` and ```Src/Components/order.js   GetOrder_Listen_Unsubscribe```
 https://brandonlehr.com/reactjs/2018/11/08/unsubscribing-from-firestore-realtime-updates-in-react
 
-### 3.1.2 Firebase Indexing
+### 4.1.2 Firebase Indexing
 When you try to fetch data from Firebase with order or where clause, you might need to give index to the collection (You will see error from console.)
 https://firebase.google.com/docs/firestore/query-data/indexing?authuser=2
 
-### 3.1.3 Problem you might encounter <br />
+### 4.1.3 Problem you might encounter <br />
 
 * A. ***Blank webpage after deploy hosting on Firebase***: You need to configure the ```firebase.json``` file (see ```Package_Rule/firebase.json```)
 https://stackoverflow.com/questions/52177222/blank-page-after-successful-firebase-deployment
@@ -114,7 +148,7 @@ https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denie
 
 
 
-### 3.1.4 Firebase Authentication <br />
+### 4.1.4 Firebase Authentication <br />
 A good tutorial can be start from here: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial and https://firebase.google.com/docs/reference/js/firebase.auth.Auth#signinwithemailandpassword. 
 
 #### reCAPTCHA and phone authentication
@@ -155,21 +189,21 @@ When you are going to verify the phone, you need to pass the phone number as wel
 
 
 
-## 3.2 React-router-dom <br />
+## 4.2 React-router-dom <br />
 React-router-dom can provide client user can be redirected without page reload. We use this in ```App.js```.
-### 3.2.1 Protected Routes 
+### 4.2.1 Protected Routes 
 Actually, nothing is really protected on the client side, cause all your code are transmitting to client web browser for rendering. Nothing is protected. Protected Routh method can only prevent client from using some functions if they doesn't meet some criteria.
 The following link: https://dev.to/mychal/protected-routes-with-react-function-components-dh shows you how to make protected route. You may find the implimentation in ```Src/App.js``` and ```Src/Components/ProtectedRoutes.js```.
 
-## 3.3 React-bootstrap <br />
+## 4.3 React-bootstrap <br />
 React-bootstrap provides so much great components such as menu bar, button, form, cards, tabs. They are beautiful and responsive.
 Official site: https://react-bootstrap.github.io/getting-started/introduction <br />
 Problem you might encounter: <br />
 * A. ***The react-bootstrap not working or showing as expected***: Add ```import "bootstrap/dist/css/bootstrap.css";``` in your index.js
 * B. ***Increase Toast width***: Add ```style={{maxWidth: '100%'}}```
 
-## 3.4 React <br />
-### 3.4.1 Dynamic image path
+## 4.4 React <br />
+### 4.4.1 Dynamic image path
 ```javascript
 <img src={require(`./img/${img.code}.jpg`)}/>
 ```
@@ -209,8 +243,8 @@ https://reactgo.com/react-change-favicon/
     https://stackoverflow.com/questions/53183362/what-is-strictmode-in-react
 
 
-## 3.5 Javascript <br />
-### 3.5.1 Shallow Copy or Deep Clone
+## 4.5 Javascript <br />
+### 4.5.1 Shallow Copy or Deep Clone
 Please refer to the document for further knowledge: https://github.com/Dungyichao/Online_Order_System/blob/main/Ref/How%20to%20Deep%20Copy%20Objects%20and%20Arrays%20in%20JavaScript.pdf . <br />
 We use lodash library's cloneDeep to performence deep copy of array in ```Src/Customer/Order/order.js```. In our example, the array will store objects which each object represents the item the customer added to the cart (the ```Src/Customer/Order/Cart/cart.js``` would render all the information provided by this array of objects). If customer add or remove any item from the cart (which also means the object in the aray), we need to first deep clone the original array, add or remove object from this new cloned array, then use```setState``` to replace the original array with the new modified array. If you don't use deep clone, the cart would not render as you expected. For example
 ```javascript
@@ -233,7 +267,7 @@ remove_item(e) {
     }
 
 ```
-### 3.5.2 Value Operation (Add/Substract)
+### 4.5.2 Value Operation (Add/Substract)
 https://stackoverflow.com/questions/11832914/round-to-at-most-2-decimal-places-only-if-necessary
 When I try to add price or substract price from current price, I would get some wierd result, the following can help to prevent it. (```Src/Components/utility.js```)
 ```javascript
@@ -250,7 +284,7 @@ function subtract_two_price(firstprice, secondprice) {
 }
 
 ```
-### 3.5.3 Generate a time list
+### 4.5.3 Generate a time list
 We want to provide customer to select pickup time. This is implement in ```Src/Customer/Order/Cart/PickUpTime.js```
 https://stackoverflow.com/questions/36125038/generate-array-of-times-as-strings-for-every-x-minutes-in-javascript
 ``` javascript
@@ -270,7 +304,7 @@ for (var i=0;tt<24*60; i++) {
 console.log(times);
 ```
 
-### 3.5.4 Local Sotrage
+### 4.5.4 Local Sotrage
 Whenever user refresh the page which he or she has already login, the login information will be cleared out and user is logged out automatically. In order to address this problem, we need to use logalStorage. You may find the implementation in ```Src/App.js```
 ```javascript
 // setter
@@ -293,4 +327,4 @@ If you want to store map in localStorage, you need to use the following:
 localStorage.setItem('user_info', JSON.stringify(user_profiles));
 JSON.parse(localStorage.getItem('user_info'))
 ```
-### 3.5.5 Await Async Function
+### 4.5.5 Await Async Function
