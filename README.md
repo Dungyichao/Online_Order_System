@@ -104,10 +104,12 @@ We can categorize all the datas into 4 collections.
 <p align="center">
 <img src="/Doc/img/Firebase_Admin_Data_ExtraAdd.png" height="100%" width="100%">  
 </p>
+
 ### 3.1.2 FriedRice
 <p align="center">
 <img src="/Doc/img/Firebase_Admin_Data_FriedRice.png" height="100%" width="100%">  
 </p>
+
 ### 3.1.3 FriedRice
 <p align="center">
 <img src="/Doc/img/Firebase_Admin_Data_Setting.png" height="100%" width="100%">  
