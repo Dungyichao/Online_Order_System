@@ -77,7 +77,7 @@ We can categorize all the datas into 4 collections.
     <tbody>
         <tr>
             <td align="center">Admin</td>
-            <td align="Left">This collection contains 3 documents: ExtraAdd, FriedRice, and Setting. <br /> * Administrator can modify the open hour, tax rate, and online order service avalibility in Setting document. <br /> * ExtraAdd document contains the add items to each dish <br /> * FriedRice document contain the fried rice items accompany with each dish</td>
+            <td align="Left">This collection contains 3 documents: ExtraAdd, FriedRice, and Setting. <br /> * Administrator can modify the open hour, tax rate, and online order service avalibility in <b>Setting</b> document. <br /> * <b>ExtraAdd</b> document contains the add items to each dish <br /> * <b>FriedRice</b> document contain the fried rice items accompany with each dish</td>
             <td align="Left">...</td>
         </tr>
         <tr>
@@ -92,11 +92,40 @@ We can categorize all the datas into 4 collections.
         </tr>
         <tr>
             <td align="center">users</td>
-            <td align="Left">...</td>
+            <td align="Left">Information of each user's when customer sign up</td>
             <td align="Left">...</td>
         </tr>
     </tbody>
 </table>
+</p>
+
+## 3.1 Admin Collections
+### 3.1.1 ExtraAdd
+<p align="center">
+<img src="/Doc/img/Firebase_Admin_Data_ExtraAdd.png" height="100%" width="100%">  
+</p>
+### 3.1.2 FriedRice
+<p align="center">
+<img src="/Doc/img/Firebase_Admin_Data_FriedRice.png" height="100%" width="100%">  
+</p>
+### 3.1.3 FriedRice
+<p align="center">
+<img src="/Doc/img/Firebase_Admin_Data_Setting.png" height="100%" width="100%">  
+</p>
+
+## 3.2 Menu Collections
+<p align="center">
+<img src="/Doc/img/Firebase_Menu_Data.png" height="100%" width="100%">  
+</p>
+
+## 3.3 Orders Collections
+<p align="center">
+<img src="/Doc/img/Firebase_Order_Data.png" height="100%" width="100%">  
+</p>
+
+## 3.4 users Collections
+<p align="center">
+<img src="/Doc/img/Firebase_User_Data.png" height="100%" width="100%">  
 </p>
 
 # 4. Programming <br />
