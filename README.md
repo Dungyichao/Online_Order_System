@@ -399,7 +399,21 @@ Promise.all(urls.map(url => {
     console.log(results[2]);
 }).catch((err) => {
     console.log(err);
+}).finally(() => {
+    //no matter what in then and catch, this will run at last of the promise
 })
+
+//ES9 for await of
+const getData2 = async function(){
+    const arrayOfPromise = urls.map(url => {
+        return(fetch(url))
+     });
+     
+     for await (let request of arrayOfPromise){
+        const data = await request.json();
+        console.log(data);
+     }
+}
 ```
 
 
