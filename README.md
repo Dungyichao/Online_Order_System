@@ -110,7 +110,7 @@ We can categorize all the datas into 4 collections.
 <img src="/Doc/img/Firebase_Admin_Data_FriedRice.png" height="100%" width="100%">  
 </p>
 
-### 3.1.3 FriedRice
+### 3.1.3 Setting
 <p align="center">
 <img src="/Doc/img/Firebase_Admin_Data_Setting.png" height="100%" width="100%">  
 </p>
@@ -359,3 +359,47 @@ localStorage.setItem('user_info', JSON.stringify(user_profiles));
 JSON.parse(localStorage.getItem('user_info'))
 ```
 ### 4.5.5 Await Async Function
+In ES8, there is Await Async syntax for Promise. If there is some data need to be fetch before you do the rest of thing, you need to use this.
+```javascript
+// from Udemy Course The Complete Web Developer in 2020: Zero to Mastery
+const urls = [
+  "https://jsonplaceholder.typicode.com/users",
+  "https://jsonplaceholder.typicode.com/posts",
+  "https://jsonplaceholder.typicode.com/albums",
+];
+
+const getData = async function () {
+  try {
+    const [users, posts, albums] = await Promise.all(
+      urls.map(async function (url) {
+        const response = await fetch(url);
+        return response.json();
+      }),
+    );
+    console.log("users", users);
+    console.log("posta", posts);
+    console.log("albums", albums);
+  } catch (err) {
+    console.log("ooooooops", err);
+  }
+};
+
+async function fetchUsers(){
+    const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await resp.json();
+    console.log(data);
+}
+
+// in promise way
+Promise.all(urls.map(url => {
+    return fetch(url).then(resp => resp.json())
+})).then(results => {
+    console.log(results[0]);
+    console.log(results[1]);
+    console.log(results[2]);
+}).catch((err) => {
+    console.log(err);
+})
+```
+
+
