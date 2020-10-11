@@ -93,7 +93,7 @@ We can categorize all the datas into 4 collections.
         <tr>
             <td align="center">users</td>
             <td align="Left">Information of each user's when customer sign up</td>
-            <td align="Left">...</td>
+            <td align="Left">* <b>Fname (string)</b>: First name<br /><br /> * <b>Lname (string)</b>: Last name <br /><br /> * <b>email (string)</b>: <br /><br /> * <b>phone (string)</b>: <br /><br /> * <b>method (string)</b>: sign up method, by phone or email. We don't need this field<br /><br /> * <b>note (string)</b>: no function at this moment<br /><br />  * <b>status (string)</b>: no function at this moment <br /><br /> </td>
         </tr>
     </tbody>
 </table>
