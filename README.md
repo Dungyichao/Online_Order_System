@@ -78,7 +78,7 @@ We can categorize all the datas into 4 collections.
         <tr>
             <td align="center">Admin</td>
             <td align="Left">This collection contains 3 documents: ExtraAdd, FriedRice, and Setting. <br /> * Administrator can modify the open hour, tax rate, and online order service avalibility in <b>Setting</b> document. <br /> * <b>ExtraAdd</b> document contains the add items to each dish <br /> * <b>FriedRice</b> document contain the fried rice items accompany with each dish</td>
-            <td align="Left">...</td>
+            <td align="Left"><b>ExtraAdd</b> <br /><br />* <b>name (string)</b>: add item name<br />* <b>price (number)</b>: price<br /><br /> <b>FriedRice</b> <br /><br /> * <b>default (boolean)</b>: default select option, only free fried rice is default<br /> * <b>name (string)</b>: fried rice item name<br /> * <b>price (number)</b>: fried rice item price<br />  </td>
         </tr>
         <tr>
             <td align="center">Menu</td>
