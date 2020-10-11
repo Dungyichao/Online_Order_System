@@ -83,7 +83,7 @@ We can categorize all the datas into 4 collections.
         <tr>
             <td align="center">Menu</td>
             <td align="Left">Contains all the dishs name, price, description, hot value, item number, status (Available/Stop), id (AutoID from Firebase)</td>
-            <td align="Left">...</td>
+            <td align="Left"> * <b>id (string)</b>: AutoID from Firebase <br /><br /> * <b>dish_name (string)</b>: <br /><br /> * <b>price (number)</b>: <br /><br /> * <b>status (string)</b>: only Available or Stop<br /><br /> * <b>descript (string)</b>: Description of the dish<br /><br /> * <b>item_number (number)</b>: Item number provide from administrator, should be unique <br /><br /> * <b>note (null)</b>: <br /><br /> * <b>hot (number)</b>: spicy degree <br /><br />  </td>
         </tr>
         <tr>
             <td align="center">Orders</td>
