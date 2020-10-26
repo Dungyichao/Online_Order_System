@@ -419,5 +419,14 @@ const getData2 = async function(){
 # 5. Optimization
 There are many ways to optimize the website such as, minimize image size, delete un-used files....The following link from Google would give you a quick snapshot of the performance of your website: https://developers.google.com/speed/pagespeed/insights/
 
+## 5.1 Image Reduce
+- If you want transparency: use PNG
+- If you want animation: use GIF
+- If you want colourful image: use JPG
+- If you want to use simple icon, logo, illustration: use SVG
+- Remove image metadata
+- Use CDNs like imigx
+* A. Reduce image size: https://tinypng.com/ , http://jpeg-optimizer.com/
+
 
 
