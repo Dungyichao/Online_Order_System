@@ -417,7 +417,7 @@ const getData2 = async function(){
 ```
 
 # 5. Optimization
-There are many ways to optimize the website such as, minimize image size, delete un-used files....The following link from Google would give you a quick snapshot of the performance of your website: https://developers.google.com/speed/pagespeed/insights/
+There are many ways to optimize the website such as, minimize image size, delete un-used files....The following link from Google would give you a quick snapshot of the performance of your website: https://developers.google.com/speed/pagespeed/insights/ or https://www.webpagetest.org/
 
 ## 5.1 Image Reduce
 - If you want transparency: use PNG
