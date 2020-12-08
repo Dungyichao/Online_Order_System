@@ -252,13 +252,33 @@ Problem you might encounter: <br />
 Remember to also check if the dynamic image path exist a picture before render it.
 https://stackoverflow.com/questions/54033765/how-to-give-image-src-dynamically-in-react-js <br />
 https://stackoverflow.com/questions/54149326/is-there-a-way-to-check-if-an-image-exists-before-setting-the-image-source-in-re <br />
+When accessing the image from the dynamic path
+```javascript
+    let img_src = '';
+        try {
+            img_src = require(`../../Pic/${var_num}.PNG`);
+            load_pic = true;
+        }
+        catch (err) {
+            load_pic = false;
+        }
+        
+     return (
+        <div>
+            {load_pic ?
+                <img src={img_src.default} />;  /* 2020 Dec 07 */
+                : null}
+        </div>
+     )
+
+```
 Related question: https://stackoverflow.com/questions/47357311/how-do-i-create-a-dynamic-variable-name-in-react 
 use the ```[]``` 
 ```javascript
 this.setState({["level" + (selectedItem.Level+1)]: FilteredListFromClick})
 ```
 
-Problem you might encounter: <br />
+### 4.4.2 Problem you might encounter: <br />
 * A. ***Each child in an array should have a unique "key" prop.***: When render component in map, you should do something like the following
 ```javascript
 .......
