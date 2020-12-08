@@ -64,6 +64,17 @@ $ firebase init
 $ firebase deploy
 // You now can visit the website from browser which URL that Firebase gave you.
 ```
+
+## 2.3 Hide Your Code from the Browser
+In the package.json
+```json
+scripts: {
+  "build": "GENERATE_SOURCEMAP=false react-scripts build"
+}
+```
+https://stackoverflow.com/questions/51415780/create-react-app-is-showing-all-my-code-in-production-how-to-hide-it
+
+
 # 3. Firebase Data Structure <br />
 We can categorize all the datas into 4 collections. 
 <table>
