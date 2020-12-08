@@ -254,6 +254,7 @@ https://stackoverflow.com/questions/54033765/how-to-give-image-src-dynamically-i
 https://stackoverflow.com/questions/54149326/is-there-a-way-to-check-if-an-image-exists-before-setting-the-image-source-in-re <br />
 When accessing the image from the dynamic path
 ```javascript
+    let load_pic = false;
     let img_src = '';
         try {
             img_src = require(`../../Pic/${var_num}.PNG`);
