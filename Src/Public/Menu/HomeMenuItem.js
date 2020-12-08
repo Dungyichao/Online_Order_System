@@ -84,7 +84,7 @@ export default class HomeMenuItem extends Component {
                                     <div style={{ flex: '9', }}><Card.Text>{rec_data.descript}</Card.Text></div>
                                     {load_pic ?
                                         <div style={{ flex: '3', display: 'block', margin: 'auto' }}>
-                                            <Card.Img variant="top" src={img_src} />
+                                            <Card.Img variant="top" src={img_src.default} />
                                         </div>
                                         : null}
 
