@@ -472,7 +472,14 @@ Use the website: https://realfavicongenerator.net/ to generate icon file. Downlo
 ```
 
 ## 5.3 ServiceWorker
-
+To achieve progressive web app, we need to enable the serviceWorker. By changing the following code in ```index.js```
+```javascript
+serviceWorker.unregister()
+```
+to 
+```javascript
+serviceWorker.register()
+```
 
 
 
