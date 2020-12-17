@@ -460,5 +460,16 @@ There are many ways to optimize the website such as, minimize image size, delete
 - Use CDNs like imigx
 * A. Reduce image size: https://tinypng.com/ , http://jpeg-optimizer.com/
 
+## 5.2 Icon
+Use the website: https://realfavicongenerator.net/ to generate icon file. Download the generated package and extract to public folder in your project. Place the following code (yours might be different according to your configuration in the generation process) in the ```<head>``` of index.html file.
+```html
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+```
+
 
 
