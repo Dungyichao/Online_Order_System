@@ -471,5 +471,8 @@ Use the website: https://realfavicongenerator.net/ to generate icon file. Downlo
     <meta name="theme-color" content="#ffffff">
 ```
 
+## 5.3 ServiceWorker
+
+
 
 
