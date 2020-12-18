@@ -473,6 +473,11 @@ Use the website: https://realfavicongenerator.net/ to generate icon file. Downlo
 
 ## 5.3 ServiceWorker
 Reference: https://scotch.io/tutorials/how-to-make-your-existing-react-app-progressive-in-10-minutes
+Reference: https://morioh.com/p/c8dae170eafd
+A service worker is a script your browser runs in the background that PWAs use for offline. To run our app in an offline environment, we need to cache its static assets and find a solution to check the network status and updates periodically.Two key components of PWAs:
+* Web app manifests
+* Service workers
+
 ### 5.3.1 Register ServiceWorker
 To achieve progressive web app, we need to enable the serviceWorker. By changing the following code in ```index.js```
 ```javascript
