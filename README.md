@@ -472,6 +472,8 @@ Use the website: https://realfavicongenerator.net/ to generate icon file. Downlo
 ```
 
 ## 5.3 ServiceWorker
+Reference: https://scotch.io/tutorials/how-to-make-your-existing-react-app-progressive-in-10-minutes
+### 5.3.1 Register ServiceWorker
 To achieve progressive web app, we need to enable the serviceWorker. By changing the following code in ```index.js```
 ```javascript
 serviceWorker.unregister()
@@ -480,6 +482,9 @@ to
 ```javascript
 serviceWorker.register()
 ```
-
-
+### 5.3.2 Provide fallback content when JavaScript is not available
+We want to show some message to the users when Javascript is disabled. Add the following ```<noscript>``` tag after the ```<body>``` tag in the ```index.html``` file 
+```html
+    <noscript>Your browser does not support JavaScript!</noscript>
+```
 
