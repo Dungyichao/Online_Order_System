@@ -475,7 +475,7 @@ Use the website: https://realfavicongenerator.net/ to generate icon file. Downlo
 Reference: https://scotch.io/tutorials/how-to-make-your-existing-react-app-progressive-in-10-minutes
 Reference: https://morioh.com/p/c8dae170eafd
 A service worker is a script your browser runs in the background that PWAs use for offline. To run our app in an offline environment, we need to cache its static assets and find a solution to check the network status and updates periodically.Two key components of PWAs:
-* Web app manifests
+* Web app manifests: The web app manifest is a simple JSON file that tells the browser about your web application and how it should behave when ‘installed’ on the user’s mobile device or desktop. Having a manifest is required by Chrome to show the Add to Home Screen prompt.
 * Service workers
 
 ### 5.3.1 Register ServiceWorker
