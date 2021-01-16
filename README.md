@@ -459,6 +459,7 @@ There are many ways to optimize the website such as, minimize image size, delete
 - Remove image metadata
 - Use CDNs like imigx
 * A. Reduce image size: https://tinypng.com/ , http://jpeg-optimizer.com/
+* B. Transparent background: https://www.remove.bg/upload 
 
 ## 5.2 Icon
 Use the website: https://realfavicongenerator.net/ to generate icon file. Download the generated package and extract to public folder in your project. Place the following code (yours might be different according to your configuration in the generation process) in the ```<head>``` of index.html file.
