@@ -163,6 +163,10 @@ export default class App extends Component {
             <Route exact path="/" render={
               (routeProps) => <Home {...routeProps} show_homepage={show_page} firebase={this.fireb} />}>
             </Route>
+            <Route path="*" render={
+              (routeProps) => <Home {...routeProps} show_homepage={show_page} firebase={this.fireb} />}>
+            </Route>
+
             <Route exact path="/homemenu" render={
               (routeProps) => <HomeMenu {...routeProps} show_homepage={show_page} firebase={this.fireb} />}>
             </Route>
