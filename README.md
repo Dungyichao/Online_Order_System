@@ -305,6 +305,12 @@ https://reactgo.com/react-change-favicon/
 * D. ***Remove <React.StrictMode>***: Remove <React.StrictMode> will solve the problem in development mode.
     https://stackoverflow.com/questions/53183362/what-is-strictmode-in-react
 
+### 4.4.3 White Space and change line: <br />
+```javascript
+<p style={{'white-space': 'pre-wrap'}}>
+    {"This \n works"}
+</p>
+```
 
 ## 4.5 Javascript <br />
 ### 4.5.1 Shallow Copy or Deep Clone
