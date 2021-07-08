@@ -500,7 +500,7 @@ Where HelloWorld is your function name
 ```
 However, after you deploy, you might encounter error: Forbidden
 https://lukestoolkit.blogspot.com/2020/06/google-cloud-functions-error-forbidden.html
-Go to the following link: cloud.google.com/functions/list . Select your project. Check the check box of the function which you encounter error. Click on ```ADD MEMBER```. In the new members field, type in "allUsers" and select the "allUsers" option. In the "Select a role" dropdown, select Cloud Functions then Cloud Functions Invoker.
+Go to the following link: https://cloud.google.com/functions/list . Select your project. Check the check box of the function which you encounter error. Click on ```ADD MEMBER```. In the new members field, type in "allUsers" and select the "allUsers" option. In the "Select a role" dropdown, select Cloud Functions then Cloud Functions Invoker.
 
 # 5. Optimization
 There are many ways to optimize the website such as, minimize image size, delete un-used files....The following link from Google would give you a quick snapshot of the performance of your website: https://developers.google.com/speed/pagespeed/insights/ or https://www.webpagetest.org/
