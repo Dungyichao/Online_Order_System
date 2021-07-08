@@ -458,9 +458,9 @@ const getData2 = async function(){
 https://firebase.google.com/docs/functions/get-started
 Use the following command to create Functions folder and related documents
 ```cmd
-npm install firebase-functions@latest firebase-admin@latest --save
-npm install -g firebase-tools
-firebase init functions
+$npm install firebase-functions@latest firebase-admin@latest --save
+$npm install -g firebase-tools
+$firebase init functions
 ```
 In the code
 ```javascript
@@ -493,9 +493,9 @@ module.exports = {
 ```
 Now you can deploy your function onto Firebase
 ```cmd
-$ firebase deploy --only functions
+$firebase deploy --only functions
 or
-$ firebase deploy --only "functions:HelloWorld"
+$firebase deploy --only "functions:HelloWorld"
 Where HelloWorld is your function name
 ```
 However, after you deploy, you might encounter error: Forbidden
