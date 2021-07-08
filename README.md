@@ -454,6 +454,54 @@ const getData2 = async function(){
 }
 ```
 
+### 4.5.6 Functions
+https://firebase.google.com/docs/functions/get-started
+Use the following command to create Functions folder and related documents
+```cmd
+npm install firebase-functions@latest firebase-admin@latest --save
+npm install -g firebase-tools
+firebase init functions
+```
+In the code
+```javascript
+const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+admin.initializeApp();
+exports.addMessage = functions.https.onRequest(async (req, res) => {
+  const original = req.query.text;
+  const writeResult = await admin.firestore().collection('messages').add({original: original});
+  res.json({result: `Message with ID: ${writeResult.id} added.`});
+});
+```
+In ```.eslintrc.js``` which check your code rule, we need some modification to save our life.
+https://www.programmersought.com/article/46885832344/
+```json
+module.exports = {
+  root: true,
+  env: {
+    es6: true,
+    node: true,
+  },
+  extends: [
+    "eslint:recommended",
+  ],
+  rules: {
+    quotes: ["error", "double"],
+    "no-unused-vars":"off",
+  },
+};
+```
+Now you can deploy your function onto Firebase
+```cmd
+$ firebase deploy --only functions
+or
+$ firebase deploy --only "functions:HelloWorld"
+Where HelloWorld is your function name
+```
+However, after you deploy, you might encounter error: Forbidden
+https://lukestoolkit.blogspot.com/2020/06/google-cloud-functions-error-forbidden.html
+Go to the following link: cloud.google.com/functions/list . Select your project. Check the check box of the function which you encounter error. Click on ```ADD MEMBER```. In the new members field, type in "allUsers" and select the "allUsers" option. In the "Select a role" dropdown, select Cloud Functions then Cloud Functions Invoker.
+
 # 5. Optimization
 There are many ways to optimize the website such as, minimize image size, delete un-used files....The following link from Google would give you a quick snapshot of the performance of your website: https://developers.google.com/speed/pagespeed/insights/ or https://www.webpagetest.org/
 
